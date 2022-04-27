@@ -1,8 +1,20 @@
 
-python3 -m venv VTUTURU
-VTUTURU\Scripts\activate
+python3 -m venv hashida
+source hashida/bin/activate
 pip install django
 django-admin.py startproject Nightshoot .
-python3 -m manage.py migrate
-python3 -m manage.py runserver
-
+deactivate
+python3 manage.py migrate
+python3 manage.py runserver
+source hashida/bin/activate
+pip freeze
+python --version
+pip install -U pip requests
+pip freeze > requirements.txt
+cat requirements.txt
+deactivate
+source hashida/bin/activate
+pip install -r requirements.txt
+deactivate
+source hashida/bin/activate
+python manage.py startapp budget
