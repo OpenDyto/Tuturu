@@ -18,3 +18,25 @@ pip install -r requirements.txt
 deactivate
 source hashida/bin/activate
 python manage.py startapp budget
+2005221100-14
+python manage.py makemigrations
+python manage.py migrate
+source hahsida/bin/activate
+pip install dataclasses
+python()
+from dataclasses import dataclasses
+@dataclass
+class BudgetPost:
+  title: str
+  content: str
+...
+obj= BudgetPost(title="Inpek", content="Sah WALLAH")
+obj.content
+quit()
+python manage.py shell
+from articles.models import Article
+obj = Article(title='Inpek', content='Sah dans la base')
+obj.save()
+quit()
+deactivate
+python
