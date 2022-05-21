@@ -1,3 +1,4 @@
+{% extends "budget/base.html" %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -7,8 +8,19 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
-    <h1>Tuturu mayushi veut un hoopa</h1>
-    <p>Avec le nom : {article_title}</p>
-    <p>Et elle espère un hoopa :{{article_obj.content}}</p>
+    {% block content %}
+    <h1>Tuturu mayushi a trouvé un hoopa</h1>
+    <p>Avec le nom : {{ title }}</p>
+    <p>Et elle espère un hoopa :{{ content }}</p>
+    <p>Mayushi souhaite tout les hoopa en dessous</p>
+    <ul>
+        {% for x in queryset %}
+            {% if x.title%}
+              <li><a href='sd{{ x.id }}'>{{ x.title }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    {% endblock content %}
   </body>
 </html>

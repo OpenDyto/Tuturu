@@ -1,0 +1,19 @@
+{% extends "budget/base.html" %}
+
+{% block content %}
+<div style="margin-top:30px">
+  <form action='.' method="POST">
+    {% csrf_token %}
+    <div style="margin-top:30px">
+      <input type="text" name="title"/>
+    </div>
+    <div style="margin-top:30px">
+      <textarea name='content' placeholder='Content'></textarea>
+    </div>
+    <div style="margin-top:30px">
+      <button type='submit'>Create article</button>
+    </div>
+  </form>
+</div>
+
+{% endblock content %}
