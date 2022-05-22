@@ -19,11 +19,16 @@ from django.urls import path, include
 from django.views.defaults import server_error
 from .views import index, create
 from budget.views import index as budget_index
-
+from accounts.views import (
+    login_view,
+    logout_view,
+)
 urlpatterns = [
     path('', index, name="index"),
     path('admin/', admin.site.urls),
-    path('bonjour/', server_error),
     path('budget/', include("budget.urls")),
     path('create/', create),
+    path('login/', login_view),
+    path('logout/', logout_view),
+
 ]

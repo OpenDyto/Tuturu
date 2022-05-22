@@ -39,4 +39,4 @@ obj = Article(title='Inpek', content='Sah dans la base')
 obj.save()
 quit()
 deactivate
-python
+python manage.py startapp accounts
