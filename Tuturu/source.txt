@@ -1,4 +1,0 @@
-https://www.youtube.com/watch?v=Bn0k9DDYBZM
-commit Devs1
-14
-Super tuto sur les base de données python et manage shell
